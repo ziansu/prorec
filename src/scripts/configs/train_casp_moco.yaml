@@ -1,0 +1,57 @@
+# Change here
+dataset_name: PurCL/bimodal-lmpa-shuffled
+run_name: CASP_moco_lmpa_c_only
+output_dir: ../save/CASP/casp_moco_lmpa_c_only
+hub_model_id: PurCL/casp-moco-lmpa-c-only
+
+# Assembly Model Setting
+assembly_model_name_or_path: PurCL/longcodeart-ep0.3-block200-26m
+
+# Source Model Setting
+source_model_name_or_path: Salesforce/codet5p-110m-embedding
+
+use_momentum_encoder: true
+
+# Do
+trust_remote_code: true
+dataloader_num_workers: 8
+remove_unused_columns: false
+do_train: true
+do_eval: true
+
+# Batch Size
+# queue size // batch size == 0
+# batch size = n_gpu * per_device_bs
+# === 4 GPU ===
+# batch size = 4 * 16 = 64
+per_device_train_batch_size: 8
+# 1024 // 64 = 16
+queue_size: 4096
+momentum: 0.999
+gradient_accumulation_steps: 1
+per_device_eval_batch_size: 64
+
+# Training Setting
+num_train_epochs: 2
+learning_rate: 0.00005
+warmup_steps: 1000
+weight_decay: 0.01
+lr_scheduler_type: cosine
+evaluation_strategy: steps
+eval_steps: 500
+save_steps: 500
+logging_steps: 10
+save_total_limit: 10
+
+# Out
+report_to: wandb
+cache_dir: ../save/.cache
+push_to_hub: true
+hub_private_repo: true
+hub_strategy: all_checkpoints
+
+# Magic
+overwrite_output_dir: true
+resume_from_checkpoint: false
+torch_compile: false
+fp16: true

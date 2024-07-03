@@ -1,0 +1,9 @@
+dualencoder_name_or_path: ../save/CASP/casp_moco_lmpa_c_only
+dualencoder_subfolder: checkpoint-17000
+assembly_model_name_or_path: PurCL/longcodeart-ep0.3-block200-26m
+source_model_name_or_path: Salesforce/codet5p-110m-embedding
+index_dir: ../save/index
+cache_dir: ../save/.cache
+
+dataset_name: PurCL/bimodal-lmpa-shuffled
+batch_size: 128  # for 2 gpus

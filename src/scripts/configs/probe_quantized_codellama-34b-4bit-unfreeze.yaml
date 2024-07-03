@@ -1,0 +1,23 @@
+prober_name_or_path: PurCL/src_prober_codellama-34b-last1unfreeze
+prober_subfolder: checkpoint-15000
+src_model_name_or_path: codellama/CodeLlama-34b-hf
+asm_tokenizer_name_or_path: PurCL/longcodeart-ep0.3-block200-26m
+dataset_name: PurCL/lmpa-prorec-test-1k
+output_dir: ../save
+output_file: max_new_25_rseq_50_results-p0.75-k500-4bit-last1unfreeze.json
+quantization: 4bit
+
+max_new_tokens: 25
+num_return_sequences: 50
+temperature: 1.0
+top_k: 500
+top_p: 0.75
+
+
+parallel_inference_split: 1/1
+
+per_device_eval_batch_size: 2
+
+remove_unused_columns: false
+
+cache_dir: ../save/.cache

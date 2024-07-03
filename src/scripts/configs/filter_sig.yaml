@@ -1,0 +1,18 @@
+dualencoder_name_or_path: PurCL/casp-moco-lmpa-c-only-sig
+dualencoder_subfolder: checkpoint-30000
+assembly_model_name_or_path: PurCL/longcodeart-ep0.3-block200-26m
+source_model_name_or_path: Salesforce/codet5p-110m-embedding
+
+cache_dir: ../save/.cache
+output_dir: eval_sig_scorer_outputs
+
+# new split configs
+dataset_name: PurCL/lmpa-prorec-test-1k
+probed_dataset_name: PurCL/SIG-max_new_25_rseq_50_results-p0.75-k500-4bit-last1unfreeze
+filtered_dataset_name:
+
+query_batch_size: 32
+encode_batch_size: 64
+top_k: 5
+
+# token: YOUR_HF_TOKEN_HERE
