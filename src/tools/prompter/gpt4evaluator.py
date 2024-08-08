@@ -16,7 +16,7 @@ For 3, the summary does not explicitly mention a specific context. It only conta
 For 2, the summary is slightly misleading. The summary domain is different and not relevant to the reference domain. However, it is implied by the choice of words in the summary, and is not explicitly mentioned.
 For 1, the summary is completely misleading. The summary domain is irrelevant to the reference domain, and it is explicitly mentioned in the summary.
 
-B. Does the summary reflect relevant functionality? Answer the question in range 1(best) to 5(worst).
+B. Does the summary reflect relevant functionality? Answer the question in range 5(best) to 1(worst).
 Functionality means the specific high-level behaviors performed in a function (e.g., sort, string comparison, decoding package, printing error messages).
 For 5, the functionality in the summary should be almost exactly the same to the reference.
 For 4, the functionalities in the summary are similar to the reference. It may be vague in details, but the overall functionality and purpose is correct.
