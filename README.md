@@ -1,7 +1,10 @@
 # Source Code Foundation Models are Transferable Binary Analysis Knowledge Bases
 
-This repo contains the implementation of the paper [*Source Code Foundation Models are Transferable Binary Analysis Knowledge Bases*](https://arxiv.org/abs/2405.19581).
+This repo contains the implementation of the paper [*Source Code Foundation Models are Transferable Binary Analysis Knowledge Bases*](https://arxiv.org/abs/2405.19581), NeurIPS'24.
 
+***September 2024*** - The paper was accepted to NeurIPS 2024!
+
+---
 
 > For minimal reproduction, please refer to `src/binsum.ipynb` for binary summarization and `src/bfname.ipynb` for binary function name recovery. For these notebooks, we pre-computed the contexts from retriever and ProRec and included them in the datasets, so no GPU is needed to run these experiments.
 
